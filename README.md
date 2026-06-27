@@ -42,8 +42,6 @@ src/
   utils.py     PSNR and evaluation helpers
 notebooks/
   DnCNN_train_kaggle.ipynb   same training, ready to run on Kaggle/Colab with a GPU
-results/
-  results.md   inference baseline and retraining numbers
 data/
   README.md    where to get Train400, Set12 and BSD68
 ```
@@ -93,13 +91,7 @@ For the baseline I used the authors' own PyTorch code, KAIR
 python main_test_dncnn.py --model_name dncnn_25 --testset_name set12 --noise_level_img 25
 ```
 
-The resulting PSNR values match the paper and are listed in `results/results.md`.
-
-## Results
-
-See `results/results.md` for the full tables. In short, the pretrained models
-reproduce the paper to within ~0.02 dB, and the model retrained with the code
-here reaches comparable PSNR (Set12 ≈ 30.4 dB, BSD68 ≈ 29.2 dB at σ = 25).
+The resulting PSNR values match the paper to within about 0.02 dB.
 
 ## Notes and difficulties
 
