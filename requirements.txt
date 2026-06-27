@@ -1,0 +1,5 @@
+# numpy is pinned to <2.0 because the prebuilt torch 2.2 wheels were compiled
+# against the numpy 1.x ABI; numpy 2.x breaks them at import time.
+numpy==1.26.4
+torch>=2.0
+opencv-python>=4.5
